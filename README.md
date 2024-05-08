@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# REACT-APP-TEST-WITH-JEST
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Installation
+To run this project, follow these steps:
+git remote add origin 
+1. Clone the repository: `git clone https://github.com/safeerep/jest-to-test.git`
+2. Navigate to the project directory: `cd jest-to-test`
+3. Install dependencies: `npm install`
 
 ## Available Scripts
 
