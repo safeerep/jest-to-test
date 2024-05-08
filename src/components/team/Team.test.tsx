@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import Team from "./Team"
 
+// we can use the describe method to have grouping of tests;
 describe("team", () => {
     test("name", () => {
         render(<Team name={"Real Madrid"}/>)
