@@ -39,5 +39,11 @@ describe("form", () => {
         expect(buttonElement).toBeInTheDocument();
         expect(buttonElement).toBeDisabled();
     })
+
+    it('name with label', () => {
+        render(<Form />)
+        const nameElement = screen.getByLabelText("Name");
+        expect(nameElement).toBeInTheDocument()
+    })
     
 })
