@@ -3,6 +3,22 @@ import Form from "./Form"
 
 
 describe("form", () => {
+    it('First heading', () => {
+        render(<Form />)
+        const level1Heading = screen.getByRole("heading", {
+            level: 1
+        })
+        expect(level1Heading).toBeInTheDocument()
+    })
+
+    it('section heading', () => {
+        render(<Form />)
+        const level2Heading = screen.getByRole("heading", {
+            level: 2
+        })
+        expect(level2Heading).toBeInTheDocument()
+    })
+
     it('name', () => {
         render(<Form />);
         const inputBoxElement = screen.getByRole("textbox", {
