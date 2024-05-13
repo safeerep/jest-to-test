@@ -7,7 +7,7 @@ To run this project, follow these steps:
 git remote add origin 
 1. Clone the repository: `git clone https://github.com/safeerep/jest-to-test.git`
 2. Navigate to the project directory: `cd jest-to-test`
-3. Install dependencies: `npm install`
+3. Install dependencies: `yarn install` / `npm install`
 
 ## Available Scripts
 
