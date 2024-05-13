@@ -51,5 +51,17 @@ describe("form", () => {
         const nameElement = screen.getByPlaceholderText("Type Your Fullname")
         expect(nameElement).toBeInTheDocument()
     })
+
+    it('note in p tag', () => {
+        render(<Form />)
+        const paragraphElement = screen.getByText("All fields are mandatory")
+        expect(paragraphElement).toBeInTheDocument()
+    })
+
+    it('X in span tag', () => {
+        render(<Form />)
+        const spanElement = screen.getByText("X")
+        expect(spanElement).toBeInTheDocument()
+    })
     
 })
