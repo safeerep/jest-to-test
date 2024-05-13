@@ -42,4 +42,15 @@ describe("Skills component", () => {
         })
         expect(startLearningButton).toHaveLength(0)
     })
+
+    test("start learning button showing after one second", async () => {
+        const skills = ['coding', 'development', 'engineering', 'bug-fixing']
+        render(<Skills skills={skills} />)
+        const startLearningButton = await screen.findByRole("button", {
+            name: "Start learning"
+        }, {
+            timeout: 3000
+        })
+        expect(startLearningButton).toBeInTheDocument()
+    })
 })
