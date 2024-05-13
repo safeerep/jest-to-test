@@ -45,5 +45,11 @@ describe("form", () => {
         const nameElement = screen.getByLabelText("Name");
         expect(nameElement).toBeInTheDocument()
     })
+
+    it('name with placeholder', () => {
+        render(<Form />)
+        const nameElement = screen.getByPlaceholderText("Type Your Fullname")
+        expect(nameElement).toBeInTheDocument()
+    })
     
 })

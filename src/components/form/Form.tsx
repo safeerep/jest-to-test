@@ -13,7 +13,7 @@ const Form = () => {
           <input
             type="text"
             id="name"
-            placeholder="Fullname"
+            placeholder="Type Your Fullname"
             value="Vishwas"
             onChange={() => {}}
           />
