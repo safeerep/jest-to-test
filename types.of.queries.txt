@@ -1,0 +1,10 @@
+RTL Queries
+------------------------
+1. getBy & getAllBy
+2. findBy & findAllBy
+3. queryBy & queryAllBy
+
+Manual Queries
+------------------------
+const {container} = render(<Form />)
+const foo = container.querySelector('[data-foo="bar"]')
