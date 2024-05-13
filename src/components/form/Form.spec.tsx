@@ -52,6 +52,12 @@ describe("form", () => {
         expect(nameElement).toBeInTheDocument()
     })
 
+    it('name with value', () => {
+        render(<Form />)
+        const nameElement = screen.getByDisplayValue("safeerep")
+        expect(nameElement).toBeInTheDocument()
+    })
+
     it('note in p tag', () => {
         render(<Form />)
         const paragraphElement = screen.getByText("All fields are mandatory")
