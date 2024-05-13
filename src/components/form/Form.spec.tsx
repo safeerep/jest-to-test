@@ -81,5 +81,11 @@ describe("form", () => {
         const spanElement = screen.getByTitle("close the window")
         expect(spanElement).toBeInTheDocument()
     })
+
+    it('div with testid', () => {
+        render(<Form />)
+        const div = screen.getByTestId("custom-element")
+        expect(div).toBeInTheDocument()
+    })
     
 })
