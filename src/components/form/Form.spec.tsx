@@ -75,5 +75,11 @@ describe("form", () => {
         const imageElement = screen.getByAltText("safeerep smiling picture")
         expect(imageElement).toBeInTheDocument()
     })
+
+    it('span tag with title', () => {
+        render(<Form />)
+        const spanElement = screen.getByTitle("close the window")
+        expect(spanElement).toBeInTheDocument()
+    })
     
 })
