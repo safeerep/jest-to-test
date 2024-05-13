@@ -15,4 +15,31 @@ describe("Skills component", () => {
         const listItems = screen.getAllByRole('listitem')
         expect(listItems).toHaveLength(skills.length)
     })
+
+    test("login button", () => {
+        const skills = ['coding', 'development', 'engineering', 'bug-fixing']
+        render(<Skills skills={skills} />)
+        const loginButton = screen.getByRole("button", {
+            name: "Login"
+        })
+        expect(loginButton).toBeInTheDocument()
+    })
+
+    test("start learning button", () => {
+        const skills = ['coding', 'development', 'engineering', 'bug-fixing']
+        render(<Skills skills={skills} />)
+        const startLearningButton = screen.queryByRole("button", {
+            name: "Start learning"
+        })
+        expect(startLearningButton).not.toBeInTheDocument()
+    })
+
+    test("start learning button with query all by and length 0", () => {
+        const skills = ['coding', 'development', 'engineering', 'bug-fixing']
+        render(<Skills skills={skills} />)
+        const startLearningButton = screen.queryAllByRole("button", {
+            name: "Start learning"
+        })
+        expect(startLearningButton).toHaveLength(0)
+    })
 })
