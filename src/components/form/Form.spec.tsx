@@ -64,6 +64,27 @@ describe("form", () => {
         expect(paragraphElement).toBeInTheDocument()
     })
 
+    it('note in p tag with text match 1', () => {
+        render(<Form />)
+        // using regex
+        const paragraphElement = screen.getByText(/all fields are/i)
+        expect(paragraphElement).toBeInTheDocument()
+    })
+
+    it('note in p tag with text match 2', () => {
+        render(<Form />)
+        // using text with option exact false
+        const paragraphElement = screen.getByText('all fields are', { exact: false})
+        expect(paragraphElement).toBeInTheDocument()
+    })
+
+    it('note in p tag with text match 3', () => {
+        render(<Form />)
+        // using custom function;
+        const paragraphElement = screen.getByText((content: string) => content === "All fields are mandatory")
+        expect(paragraphElement).toBeInTheDocument()
+    })
+
     it('X in span tag', () => {
         render(<Form />)
         const spanElement = screen.getByText("X")
